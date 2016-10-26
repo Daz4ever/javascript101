@@ -147,3 +147,39 @@ function printbanner(sentence) {
 }
 
 printbanner("Hello There!");
+
+// 11) print factors given a number
+
+function factors(number) {
+  for (var i = 0; i <= number; i ++) {
+    if (number % i === 0) {
+      console.log(i);
+    }
+    else {
+
+    }
+  }
+}
+factors(12);
+
+
+// 12) cipher
+
+function cipher(sentence) {
+
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+   "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
+var shiftedAlphabet = ["w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+ "o", "p", "q", "r", "s", "t", "u", "v", " "];
+var cipher = "";
+
+for(var i = 0; i < sentence.length; i++) {
+  var alphabetIndex = alphabet.indexOf(sentence[i]);
+  var shiftedletter = shiftedAlphabet[alphabetIndex];
+  cipher += shiftedletter;
+}
+console.log(cipher);
+}
+
+
+cipher('hello there');
